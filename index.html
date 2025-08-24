@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandan Verma - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">folio<span class="neon">Kd</span></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="hero-flex">
+        <!-- Left: Text Content -->
+        <div class="hero-left">
+          <span class="hero-greet">Hello, I'm</span>
+          <h1 class="hero-name">Chandan Verma</h1>
+          <h2 class="hero-role">Web Developer &amp; SEO Expert</h2>
+          <p class="hero-desc">
+            I craft modern, high-performance websites and help brands grow online.<br>
+            Let's build something amazing together!
+          </p>
+          <a href="#contact" class="hero-cta">Contact Me</a>
+          <div class="hero-socials">
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href=" https://github.com/chandan-xcoder " target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/__mr._chand__810__?igsh=MWRwamRxc3NvaG9tNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Right: Floating Profile Image -->
+        <div class="hero-right">
+          <div class="hero-img-glow">
+            <img src=" C:\Users\hp\Pictures\ved\IMG20240815081654.jpg " alt="Chandan Verma" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-card">
+            <p>
+                I am a Computer Science Engineering student at Invertis University, Bareilly, Uttar Pradesh.<br>
+                I love solving problems, learning new technologies, and collaborating on innovative projects.<br>
+                My interests include full-stack development, cloud computing, and AI.
+            </p>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-html5"></i> HTML/CSS</div>
+            <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-card"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-card"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill-card"><i class="fab fa-react"></i> React</div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A modern, responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>Weather forecast app using OpenWeatherMap API and React.</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Student Result Portal</h3>
+                <p>Web app for managing and viewing student results, built with Python and Flask.</p>
+                <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-left">
+        &copy; 2025 Chandan Verma. All rights reserved.
+      </div>
+      <div class="footer-center">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#projects" class="footer-link">Portfolio</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-right">
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/chandan-xcoder" target="_blank" aria-label="GitHub" class="footer-social"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/__mr._chand__810__?igsh=MWRwamRxc3NvaG9tNw==" target="_blank" aria-label="Instagram" class="footer-social"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
