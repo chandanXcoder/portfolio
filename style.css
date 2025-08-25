@@ -335,12 +335,33 @@ h2 {
     border-radius: var(--border-radius);
     transition: var(--transition);
     text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-card:hover {
     border-color: var(--neon-pink);
     box-shadow: 0 0 24px var(--neon-pink), 0 0 48px var(--neon-purple);
     color: var(--neon-pink);
+    transform: translateY(-5px) scale(1.03);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.skill-card:hover::before {
+    opacity: 0.1;
 }
 
 /* About Card */
