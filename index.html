@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add SEO meta tags -->
+    <meta name="description" content="Chandan Verma - Web Developer & SEO Expert. Creating modern, high-performance websites and helping brands grow online.">
+    <meta name="keywords" content="web developer, SEO expert, portfolio, frontend developer">
+    <meta property="og:title" content="Chandan Verma - Portfolio">
+    <meta property="og:description" content="Web Developer & SEO Expert">
+    <meta property="og:image" content="image/chandan.jpg">
+    
     <title>Chandan Verma - Portfolio</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="image/chandan.jpg" as="image">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -43,11 +55,11 @@
             <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href=" https://github.com/chandan-xcoder " target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.instagram.com/__mr._chand__810__?igsh=MWRwamRxc3NvaG9tNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/+91 8103077970" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="https://wa.me/918103077970" target="_blank" rel="noopener" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <!-- <a href="tel:+91 8103077970" aria-label="Call Me">
-                <i class="fas fa-phone"></i> -->
+            <a href="tel:+918103077970" aria-label="Call Me">
+                <i class="fas fa-phone"></i>
             </a>
           </div>
         </div>
@@ -119,15 +131,16 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <div class="contact-form">
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
+            <form aria-label="Contact form">
+                <input type="text" placeholder="Name" required aria-label="Your name">
+                <input type="email" placeholder="Email" required aria-label="Your email">
+                <textarea placeholder="Message" required aria-label="Your message"></textarea>
+                <button type="submit" aria-label="Send message">Send Message</button>
             </form>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer class="site-footer">
       <div class="footer-left">
         &copy; 2025 Chandan Verma. All rights reserved.
@@ -138,17 +151,23 @@
         <a href="#projects" class="footer-link">Portfolio</a>
         <a href="#contact" class="footer-link">Contact</a>
       </div>
-      <!-- <div class="footer-right">
-        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/chandan-xcoder" target="_blank" aria-label="GitHub" class="footer-social"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/__mr._chand__810__?igsh=MWRwamRxc3NvaG9tNw==" target="_blank" aria-label="Instagram" class="footer-social"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/1234567890" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social">
-          <i class="fab fa-whatsapp"></i>
+      <div class="footer-right">
+        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="footer-social">
+            <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="tel:+91 8103077970" aria-label="Call Me" class="footer-social">
+        <a href="https://github.com/chandan-xcoder" target="_blank" aria-label="GitHub" class="footer-social">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/__mr._chand__810__?igsh=MWRwamRxc3NvaG9tNw==" target="_blank" aria-label="Instagram" class="footer-social">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/918103077970" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918103077970" aria-label="Call Me" class="footer-social">
             <i class="fas fa-phone"></i>
         </a>
-      </div> -->
+      </div>
     </footer>
 
     <script src="script.js"></script>

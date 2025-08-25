@@ -20,6 +20,9 @@
     --shadow-neon: 0 0 24px 2px var(--neon-pink), 0 0 48px 8px var(--neon-purple);
     --shadow-card: 0 4px 32px 0 rgba(120,75,160,0.18);
     --font-heading: 'Inter', 'Segoe UI', Arial, sans-serif;
+    --container-width: min(1200px, 90%);
+    --section-spacing: clamp(3rem, 8vw, 6rem);
+    --card-spacing: clamp(1rem, 3vw, 2rem);
 }
 
 html {
@@ -167,6 +170,26 @@ nav {
     }
     .nav-toggle-label {
         display: flex;
+    }
+}
+
+/* Enhanced mobile navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(24, 18, 43, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
     }
 }
 
@@ -320,8 +343,8 @@ h2 {
 /* Skills */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    gap: var(--card-spacing);
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -395,7 +418,7 @@ h2 {
 /* Project Cards */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
@@ -859,18 +882,76 @@ footer {
   transform: scale(1.12) rotate(-6deg);
 }
 
-/* Responsive Footer */
-@media (max-width: 900px) {
-  .site-footer {
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 1.2rem 2vw;
-    text-align: center;
-  }
-  .footer-center {
-    gap: 1.2rem;
-  }
-  .footer-right {
-    gap: 0.8em;
-  }
+/* Mobile-first media queries */
+:root {
+    --container-width: min(1200px, 90%);
+    --section-spacing: clamp(3rem, 8vw, 6rem);
+    --card-spacing: clamp(1rem, 3vw, 2rem);
+}
+
+/* Container for sections */
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive typography */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: var(--section-spacing);
+}
+
+/* Enhanced grid layouts */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: var(--card-spacing);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    gap: var(--card-spacing);
+}
+
+/* Professional animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Enhanced mobile navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(24, 18, 43, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
 }
