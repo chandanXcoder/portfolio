@@ -58,23 +58,39 @@ document.querySelectorAll('section, .skill-card, .project-card').forEach(el => {
     observer.observe(el);
 });
 
-// Enhanced form handling with validation
+// Initialize EmailJS
+// Replace with your actual EmailJS user ID
+emailjs.init("YOUR_USER_ID");
+
+// Enhanced form handling with EmailJS
 const contactForm = document.querySelector('.contact-form form');
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const formData = new FormData(contactForm);
     const button = contactForm.querySelector('button');
     button.disabled = true;
     button.textContent = 'Sending...';
 
+    // Get form data
+    const name = contactForm.querySelector('input[type="text"]').value;
+    const email = contactForm.querySelector('input[type="email"]').value;
+    const message = contactForm.querySelector('textarea').value;
+
     try {
-        // Add your form submission logic here
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+        // Send email using EmailJS
+        // Replace with your actual template ID and service ID
+        await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            from_name: name,
+            from_email: email,
+            message: message,
+            to_name: "Chandan Verma", // Your name
+            to_email: "your-email@example.com" // Your email
+        });
         
         showNotification('Message sent successfully!', 'success');
         contactForm.reset();
     } catch (error) {
+        console.error('Error:', error);
         showNotification('Failed to send message. Please try again.', 'error');
     } finally {
         button.disabled = false;
